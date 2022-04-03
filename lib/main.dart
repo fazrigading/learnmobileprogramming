@@ -9,13 +9,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = ThemeData();
-    Color myColor = Theme.of(context).colorScheme.secondary;
     return MaterialApp(
       title: "Flutter Gading",
-      theme: theme.copyWith(
-        colorScheme: theme.colorScheme.copyWith(secondary: myColor),
-      ),
+      theme: ThemeData(fontFamily: 'SanFrancisco'),
       home: const MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -46,9 +42,7 @@ class MyHomePage extends StatelessWidget {
             centerTitle: true,
             title: const Text(
               "Post-test 1 Gading",
-              style: TextStyle(
-                  fontFamily: 'SanFrancisco', fontWeight: FontWeight.w600),
-              textAlign: TextAlign.center,
+              style: TextStyle(fontWeight: FontWeight.w600),
             ),
             backgroundColor: Colors.black45,
           ),
@@ -63,15 +57,13 @@ class MyHomePage extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 42,
-                        fontFamily: 'SanFrancisco',
                         fontWeight: FontWeight.w700),
                   )),
               const Padding(
                 padding:
                     EdgeInsets.only(left: 75, right: 75, top: 25, bottom: 25),
                 child: TextField(
-                  style: TextStyle(
-                      color: Colors.white, fontFamily: 'SanFrancisco'),
+                  style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.person, color: Colors.white),
                     focusColor: Colors.white,
@@ -82,7 +74,7 @@ class MyHomePage extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: Colors.white60,
                         fontSize: 18,
-                        fontFamily: 'SanFrancisco'),
+                        fontWeight: FontWeight.w300),
                   ),
                 ),
               ),
@@ -102,7 +94,7 @@ class MyHomePage extends StatelessWidget {
                       hintStyle: TextStyle(
                           color: Colors.white60,
                           fontSize: 18,
-                          fontFamily: 'SanFrancisco')),
+                          fontWeight: FontWeight.w300)),
                 ),
               ),
               Padding(
@@ -121,8 +113,7 @@ class MyHomePage extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 18,
                               color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: 'SanFrancisco'))),
+                              fontWeight: FontWeight.w500))),
                 ),
               )
             ],
