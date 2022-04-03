@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// ignore: must_be_immutable
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
